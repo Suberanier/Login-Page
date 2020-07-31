@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sign Up</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    * {
+      box-sizing: border-box;  
+      text-decoration: none; 
+    }
+
+    body {
+      background: #344a72; 
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1em;
+      color: black; 
+    }
+
+    .container {
+      margin: -10px auto; 
+      max-width: 400px; 
+      padding: 20px;  
+    }
+
+    .form-wrap .form-group input {
+      width: 100%;
+      padding: 10px; 
+      border: black 1px solid; 
+      border-radius: 5px; 
+    }
+
+    .form-wrap .form-group label {
+      display: block; 
+      color: black; 
+    }
+
+    .form-wrap .form-group {
+      margin-top: 0; 
+    }
+
+ /* Sign Up */ 
+ .form-wrap h1 {
+      text-align: center;
+      margin-right: 50px;
+      margin-left: 50px; 
+      margin-top: 10px;    
+    }
+    /* First Name */ 
+    .form-wrap h2 {
+      text-align:center;
+    }
+    /* Lastname */ 
+    .form-wrap h3 {
+      margin-left: 60px; 
+      margin-top: 50px; 
+    }
+    /* Email */ 
+    .form-wrap h4 {
+      margin-left: 60px; 
+      margin-top: 50px;
+    }
+    /* Password */ 
+    .form-wrap h5 {
+      margin-left: 60px; 
+      margin-top: 50px; 
+    }
+    /* Confirm Password */ 
+    .form-wrap h6 {
+      margin-left: 60px; 
+      margin-top: 50px; 
+    }
+    /* Button */ 
+    .form-wrap button { 
+      display: block; 
+      width:100%;   
+      margin-top:20px;
+      height: 30px; 
+      background: #49c1a2; 
+      color: white; 
+      cursor: pointer;    
+    }
+
+    .form-wrap button:hover{
+      background: #37a08e; 
+    }
+    /* Footer */ 
+    footer {
+      text-align: center; 
+      margin-top: 10px; 
+    }
+
+    footer a {
+    color: #49c1a2; 
+  }
+   
+  /* The White Box */ 
+  .box {
+    display: inline-block; 
+    width: 400px; 
+    height: 650px; 
+  }
+
+  #box-1 { 
+    position: fixed; 
+    background:white;
+    margin-left: 600px; 
+    margin-top: 10px; 
+    margin-right: 500px;  
+  }
+
+  
+</style>
+</head>
+<body>
+  <app-root>
+    <div id="box-1" class="box">
+      <form>
+       <div class="container">
+        <!--Sign Up Message-->
+       <div class="form-wrap h1">
+         <h1>Sign Up</h1> 
+         <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp It's free and only takes a minute</p><br>
+        <!--First Name-->
+        <div class="form-group">
+        <label for="first-name">First Name</label><br>
+        <input type="text" id="firstname" name="firstname"> 
+      </div><br>
+      <!--Last Name-->
+      <div class="form-group">
+        <label for="last-name">Last Name</label><br>
+        <input type="text"  name="lastname" id="lastname"> 
+      </div><br>
+      <!--Email-->
+        <div class="form-group">
+        <label for="email">Email</label><br>
+        <input type="email"  name="email" id="email"> 
+      </div><br>
+      <!--Password-->
+      <div class="form-group">
+        <label for="password">Password</label><br>
+        <input type="password"  name="password" id="password"> 
+      </div><br>
+      <!--Confirm Password-->
+      <div class="form-group">
+        <label for="password2">Confirm Password</label><br>
+        <input type="password"  name="confirm" id="confirm"> 
+      </div><br>
+      <!--Submission Button-->
+      <div class="form-wrap button">
+      <button type="submit" class="button">Sign Up</button>
+        <p class="button-notice">
+          By clicking the Sign Up button, you agree to our 
+          <a href="#">Terms & Conditions</a> and 
+          <a href="#">Privacy Policy</a>
+        </p>    
+    </div>
+  </div>
+      </form>
+    </div>
+    <!--Text & Links Under Submission Button-->
+    <footer>
+      <h3>Already have an account? <a href="#">Login Here</a></h3>
+    </footer>
+  </div>
+  </app-root>
+</body>
+</html>
