@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruweon - Home of Gamers</title>
+</head>
+    <style>
+body { 
+      background-image: url("https://cdn.discordapp.com/attachments/541968952440520717/785621499163181096/image2.jpg");
+      opacity:1; 
+      background-position: center; 
+      background-size: cover;  
+      height: 100%;
+      background-blend-mode:soft-light;
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
+      height: 100%; 
+      width: 100%; 
+      z-index: 1;   
+      font-size: 20px; 
+    }   
+
+    #navbar {
+      display: flex; 
+      position: sticky;
+      top: 0;  
+      background: #333; 
+      color: white; 
+      justify-content: space-between; 
+      z-index: 1; 
+      padding: 1rem; 
+      opacity: 0.5;
+      text-decoration: none;
+    }
+
+    #navbar ul {
+      display: flex; 
+      align-items: center; 
+      list-style: none; 
+      text-decoration: none; 
+    }
+
+    #navbar ul li a {
+      color: white; 
+      padding: 0.75rem;
+      margin: 0 0.25rem; 
+      text-decoration: none;
+    }
+
+    #navbar ul li a:hover {
+      background: rgb(58, 55, 55); 
+      border-radius: 5px; 
+      opacity: 0.5; 
+    }
+/* From Style CSS */
+:root {
+  --primary-color:rgba(58, 55, 55);
+  --secondary-color:rgba(252, 253, 253, 0.75);
+  --overlay-color:rgba(24, 39, 51, 0.85);
+  --menu-speed: 0.75s; 
+}
+    /* From Menu CSS */
+
+    .menu-wrap {
+  position: fixed; 
+  top: 8px; 
+  right: 55px; 
+  z-index: 3; 
+}
+
+.menu-wrap .toggler {
+  position: absolute; 
+  top: 0; 
+  left: 0;  
+  z-index: 2; 
+  cursor: pointer; 
+  width: 50px; 
+  height: 40px; 
+  opacity: 0; 
+}
+
+.menu-wrap .hamburger {
+  position: absolute; 
+  top: 0; 
+  left: 0;
+  z-index: 1; 
+  width: 25px; 
+  height: 10px; 
+  padding: 1rem; 
+  background: var(--primary-color); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+/* Menu Lines */
+
+.menu-wrap .hamburger > div {
+  position: relative; 
+  flex: none; 
+  width: 100%; 
+  height: 2px; 
+  background: white; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  transition: all 0.4s ease; 
+}
+
+/* Lines top and bottom for menu */ 
+.menu-wrap .hamburger > div::before, 
+.menu-wrap .hamburger > div::after {
+  content: ''; 
+  position: absolute; 
+  z-index: 1; 
+  top: -10px; 
+  width: 100%; 
+  height: 2px; 
+  background: inherit; 
+}
+
+.menu-wrap .hamburger > div::after {
+  top: 10px; 
+} 
+/* Menu Toggle Animation */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg); 
+}
+
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg); 
+}
+
+/* rotation of menu */ 
+.menu-wrap .toggler:checked:hover + .hamburger > div 
+{
+  transform: ratate(225deg);
+}
+
+/* Show Menu */
+ .menu-wrap .toggler:checked ~ .menu {
+   visibility: visible; 
+ }
+
+ .menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1); 
+  transition-duration: var(--menu-speed); 
+ }
+
+ .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1; 
+    transition: opacity 0.4s ease 0.4s; 
+ }
+ /* Menu Continued */ 
+.menu-wrap .menu {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  overflow: hidden; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;  
+  visibility: hidden;
+}
+
+.menu-wrap .menu > div {
+  background: var(--overlay-color);
+  border-radius: 50%; 
+  width: 300vw;
+  height:300vw; 
+  display: flex; 
+  flex: none; 
+  align-items: center; 
+  justify-content: center; 
+  transform: scale(0);
+  transition: all 0.4s ease; 
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center; 
+  max-width: 90vw; 
+  max-height: 100vw; 
+  opacity: 0; 
+  transition: opacity 0.4s ease;  
+}
+
+.menu-wrap .menu > div >div > ul > li {
+  list-style: none; 
+  color: white; 
+  font-size:1.5rem; 
+  padding:1rem; 
+}
+
+.menu-wrap .menu > div >div > ul > li > a {
+  color: inherit; 
+  text-decoration: none; 
+  transition: color 0.4s ease; 
+}
+
+.menu-wrap .menu > div >div > ul > li > a:hover {
+  color: var(--secondary-color); 
+}
+
+.search input[type=text]{
+  float: right; 
+  padding: 6px; 
+  border: none; 
+  margin-top: 25px; 
+  margin-right: 16px; 
+  font-size: 17px; 
+}
+
+
+
+</style>
+
+
+
+<body>
+  <app-root>
+    <div id="mainpage" class="primarypage">
+  
+<!--Navbar-->
+<nav id="navbar">
+  <h1 class="logo">
+    <span class="text-primary">
+      <i class="fas fa-book-open"></i> Ruweon </span> 
+  </h1>
+  <ul>
+    <li><a href="about.html">About Ruweon</a></li>
+    <li><a href="gmail.html">Sign Up</a></li>
+    <li><a href="search_bar_for_products.html">Browse Products</a></li>
+  </ul>
+      
+  <!--Button For Login (Connected to Modal)-->
+  <button onclick="window.location.href='doc.html';">Login</button>
+    
+
+
+    <!------------------------------------------------------------>
+  <div class="search"> 
+    <input type="text" placeholder="Search.."> 
+  </div>
+    
+  
+  
+  <div id="mainpage" class="primarypage">
+  
+        <!--Menu Bar-->
+      <div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger"><div></div></div>
+        <div class="menu">
+        <div>
+          <div>
+            <ul>
+              <li><a href="info_page.html">About</a></li>
+              <li><a href="notifications.html">Notifications</a></li>
+              <li><a href="login.html">Sign Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  </nav>
+</body>
+</html>
